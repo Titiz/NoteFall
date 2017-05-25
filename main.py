@@ -6,7 +6,7 @@ import random
 
 # My friend challenged me to make this in one evening.
 # This is a very simple version of a guitar hero clone.
-# No music or anything
+# No music or anything, just a minimal implementation.
 
 class presscube:
     def __init__(self, sizex, sizey, x, y, button):
@@ -82,7 +82,7 @@ if __name__ == '__main__':
     pygame.init()
     pygame.font.init()
     score = 0
-    pygame.display.set_caption('Monkey Fever')
+    pygame.display.set_caption('Cube Catch')
     pygame.mouse.set_visible(1)
     width = 800
     height = 1000
@@ -95,10 +95,10 @@ if __name__ == '__main__':
     x_positions = [width/8, width/8 + width/5, width/8+ 2* width/5, width-width/8]
     
     
-    presscube0 = presscube(button_size[0], button_size[1], x_positions[0], height-button_size[1], pygame.K_h)
-    presscube1 = presscube(button_size[0], button_size[1], x_positions[1], height-button_size[1], pygame.K_j)
-    presscube2 = presscube(button_size[0], button_size[1], x_positions[2], height-button_size[1], pygame.K_k)
-    presscube3 = presscube(button_size[0], button_size[1], x_positions[3], height-button_size[1], pygame.K_l)
+    presscube0 = presscube(button_size[0], button_size[1], x_positions[0], height-button_size[1], pygame.K_a)
+    presscube1 = presscube(button_size[0], button_size[1], x_positions[1], height-button_size[1], pygame.K_s)
+    presscube2 = presscube(button_size[0], button_size[1], x_positions[2], height-button_size[1], pygame.K_d)
+    presscube3 = presscube(button_size[0], button_size[1], x_positions[3], height-button_size[1], pygame.K_j)
 
     presscubes = [presscube0, presscube1, presscube2, presscube3]
     pressed = []
